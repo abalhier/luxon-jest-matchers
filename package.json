@@ -1,0 +1,9 @@
+{
+  "name": "luxon-jest-matchers",
+  "version": "0.1.0",
+  "description": "Provides Jest matchers for Luxon",
+  "main": "index.js",
+  "repository": "https://github.com/abalhier/luxon-jest-matchers.git",
+  "author": "Alexandre Balhier <abalhier@gmail.com>",
+  "license": "Unlicense"
+}

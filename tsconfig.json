@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noLib": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "target": "es6",
+    "lib": ["es6"],
+    "typeRoots": ["types/index.d.ts", "node_modules/@types"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"],
+}

@@ -1,0 +1,7 @@
+package.json
+**/build/*
+**/dist/*
+**/release/*
+**/docs/*
+**/sample/*
+**/_proto/*

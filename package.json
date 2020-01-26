@@ -2,8 +2,37 @@
   "name": "luxon-jest-matchers",
   "version": "0.1.0",
   "description": "Provides Jest matchers for Luxon",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "repository": "https://github.com/abalhier/luxon-jest-matchers.git",
   "author": "Alexandre Balhier <abalhier@gmail.com>",
-  "license": "Unlicense"
+  "license": "Unlicense",
+  "scripts": {
+    "build": "tsc",
+    "test": "yarn jest --colors",
+    "prepublishOnly": "yarn build && yarn test"
+  },
+  "files": [
+    "lib"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn build && yarn test"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^24.9.0",
+    "@types/luxon": "^1.21.0",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.2",
+    "luxon": "^1.21.3",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.0.0",
+    "typescript": "3.7.x"
+  }
 }

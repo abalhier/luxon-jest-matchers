@@ -1,4 +1,5 @@
 # luxon-jest-matchers
+[![Build Status][travis-image]][travis-url]]
 
 This library aims to provide custom assertions for Luxon with Jest runner
 

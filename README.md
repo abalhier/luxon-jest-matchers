@@ -1,5 +1,5 @@
 # luxon-jest-matchers
-[![Build Status][travis-image]][travis-url]]
+[![Build Status](https://travis-ci.org/abalhier/luxon-jest-matchers.svg?branch=master)](https://travis-ci.org/abalhier/luxon-jest-matchers)
 
 This library aims to provide custom assertions for Luxon with Jest runner
 

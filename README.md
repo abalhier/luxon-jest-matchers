@@ -34,14 +34,14 @@ expect(anInterval).toEqualInterval(anotherInterval);
 
 ## DateTime
 
-- toEqual(date: DateTime)
+- toEqualDateTime(date: DateTime)
 - toBeBeforeDateTime(date: DateTime)
 - toBeAfterDateTime(date: DateTime)
 
 ## Duration
 
-- toEqual(duration: Duration)
+- toEqualDuration(duration: Duration)
 
 ## Interval
 
-- toEqual(interval: Interval)
+- toEqualInterval(interval: Interval)

@@ -1,7 +1,7 @@
 import { Duration } from 'luxon';
 
 export const toEqualDuration = (received: Duration, expected: Duration) => {
-  const areEqual = received.equals(expected);
+  const areEqual = received.as('minute') === expected.as('minute');
 
   if (areEqual) {
     return {

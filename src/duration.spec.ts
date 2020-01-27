@@ -14,6 +14,6 @@ describe('DateTime matchers', () => {
   it('should pass when Intervals are equal', () => {
     const oneHour = Duration.fromObject({ hour: 1 });
 
-    expect(oneHour).toEqualDuration(Duration.fromObject({ hour: 1 }));
+    expect(oneHour).toEqualDuration(Duration.fromObject({ minute: 60 }));
   });
 });

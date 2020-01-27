@@ -5,6 +5,8 @@ declare global {
   namespace jest {
     interface Matchers<R> {
       toEqualDateTime(expected: DateTime): R;
+      toBeBeforeDateTime(date: DateTime): R;
+      toBeAfterDateTime(date: DateTime): R;
       toEqualInterval(expected: Interval): R;
       toEqualDuration(expected: Duration): R;
     }

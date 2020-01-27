@@ -15,3 +15,35 @@ export const toEqualDateTime = (received: DateTime, expected: DateTime) => {
     };
   }
 };
+
+export const toBeAfterDateTime = (left: DateTime, right: DateTime) => {
+  const isAfter = left > right;
+
+  if (isAfter) {
+    return {
+      message: () => `expected ${left} not to be after ${right}`,
+      pass: true,
+    };
+  } else {
+    return {
+      message: () => `expected ${left} to be after ${right}`,
+      pass: false,
+    };
+  }
+};
+
+export const toBeBeforeDateTime = (left: DateTime, right: DateTime) => {
+  const isBefore = left < right;
+
+  if (isBefore) {
+    return {
+      message: () => `expected ${left} not to be before ${right}`,
+      pass: true,
+    };
+  } else {
+    return {
+      message: () => `expected ${left} to be before ${right}`,
+      pass: false,
+    };
+  }
+};

@@ -1,5 +1,11 @@
-import { toEqualDateTime } from './datetime';
+import { toEqualDateTime, toBeAfterDateTime, toBeBeforeDateTime } from './datetime';
 import { toEqualDuration } from './duration';
 import { toEqualInterval } from './interval';
 
-export default { toEqualDateTime, toEqualDuration, toEqualInterval };
+export default {
+  toBeBeforeDateTime,
+  toBeAfterDateTime,
+  toEqualDateTime,
+  toEqualDuration,
+  toEqualInterval,
+};

@@ -1,5 +1,5 @@
 import { toEqualDateTime, toBeAfterDateTime, toBeBeforeDateTime } from './datetime';
-import { toEqualDuration } from './duration';
+import { toEqualDuration, toEqualDurationAsMinutes } from './duration';
 import { toEqualInterval } from './interval';
 
 export default {
@@ -7,5 +7,6 @@ export default {
   toBeAfterDateTime,
   toEqualDateTime,
   toEqualDuration,
+  toEqualDurationAsMinutes,
   toEqualInterval,
 };

@@ -41,6 +41,7 @@ expect(anInterval).toEqualInterval(anotherInterval);
 ## Duration
 
 - toEqualDuration(duration: Duration)
+- toEqualDurationAsMinutes(duration: Duration)
 
 ## Interval
 

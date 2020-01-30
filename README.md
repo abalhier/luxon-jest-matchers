@@ -46,3 +46,4 @@ expect(anInterval).toEqualInterval(anotherInterval);
 ## Interval
 
 - toEqualInterval(interval: Interval)
+- toEngulfInterval(interval: Interval)

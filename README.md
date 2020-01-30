@@ -47,3 +47,4 @@ expect(anInterval).toEqualInterval(anotherInterval);
 
 - toEqualInterval(interval: Interval)
 - toEngulfInterval(interval: Interval)
+- toContainDateTime(date: DateTime)

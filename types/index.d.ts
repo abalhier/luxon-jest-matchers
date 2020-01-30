@@ -12,6 +12,7 @@ declare global {
       // Interval
       toEqualInterval(expected: Interval): R;
       toEngulfInterval(expected: Interval): R;
+      toContainDateTime(expected: DateTime): R;
 
       // Duration
       toEqualDuration(expected: Duration): R;

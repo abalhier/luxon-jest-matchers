@@ -37,7 +37,21 @@ describe('Interval matchers', () => {
     it('should pass when first Interval contains given Interval ', () => {
       const betweenNowAndOneHour = Interval.after(DateTime.local(), { hour: 1 });
 
-      expect(betweenNowAndOneHour).toEngulfInterval(Interval.after(DateTime.local(), { hour: 1 }));
+      expect(betweenNowAndOneHour).toEngulfInterval(Interval.after(DateTime.local(), { minute: 50 }));
+    });
+  });
+
+  describe('toContainDateTime', () => {
+    it('should not pass when Interval does not contain given DateTime', () => {
+      const betweenNowAndOneHour = Interval.after(DateTime.local(), { hour: 1 });
+
+      expect(betweenNowAndOneHour).not.toContainDateTime(DateTime.local().plus({ hour: 2 }));
+    });
+
+    it('should pass when Interval contains given DateTime', () => {
+      const betweenNowAndOneHour = Interval.after(DateTime.local(), { hour: 1 });
+
+      expect(betweenNowAndOneHour).toContainDateTime(DateTime.local().plus({ minute: 59 }));
     });
   });
 });

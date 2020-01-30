@@ -1,13 +1,16 @@
 {
   "name": "luxon-jest-matchers",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Provides Jest matchers for Luxon",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
   "repository": "https://github.com/abalhier/luxon-jest-matchers.git",
   "author": "Alexandre Balhier <abalhier@gmail.com>",
   "license": "Unlicense",
-  "keywords": ["luxon", "jest"],
+  "keywords": [
+    "luxon",
+    "jest"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "yarn jest --colors",

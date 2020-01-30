@@ -7,6 +7,7 @@
   "repository": "https://github.com/abalhier/luxon-jest-matchers.git",
   "author": "Alexandre Balhier <abalhier@gmail.com>",
   "license": "Unlicense",
+  "keywords": ["luxon", "jest"],
   "scripts": {
     "build": "tsc",
     "test": "yarn jest --colors",

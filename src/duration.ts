@@ -1,9 +1,9 @@
-import { Duration } from 'luxon';
+import { Duration, DurationUnit } from 'luxon';
 
 export const toEqualDuration = (received: Duration, expected: Duration) => innerToEqualDuration(received, expected, (r, e) => r.equals(e));
 
-export const toEqualDurationAsMinutes = (received: Duration, expected: Duration) =>
-  innerToEqualDuration(received, expected, (r, e) => r.as('minute') === e.as('minute'));
+export const toEqualDurationAs = (received: Duration, expected: Duration, unit: DurationUnit) =>
+  innerToEqualDuration(received, expected, (r, e) => r.as(unit) === e.as(unit));
 
 const innerToEqualDuration = (received: Duration, expected: Duration, equals: (d1: Duration, d2: Duration) => boolean) => {
   const areEqual = equals(received, expected);

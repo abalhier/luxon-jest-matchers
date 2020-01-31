@@ -1,5 +1,5 @@
 /// <reference types="jest" />
-import { DateTime, Duration, Interval } from 'luxon';
+import { DateTime, Duration, Interval, DurationUnit } from 'luxon';
 
 declare global {
   namespace jest {
@@ -16,7 +16,7 @@ declare global {
 
       // Duration
       toEqualDuration(expected: Duration): R;
-      toEqualDurationAsMinutes(expected: Duration): R;
+      toEqualDurationAs(expected: Duration, unit: DurationUnit): R;
     }
   }
 }

@@ -47,3 +47,33 @@ export const toBeBeforeDateTime = (left: DateTime, right: DateTime) => {
     };
   }
 };
+
+export const toBeValidDateTime = (received: DateTime) => {
+  if (received.isValid) {
+    return {
+      message: () => `expected ${received} not to be valid `,
+      pass: true,
+    };
+  } else {
+    return {
+      message: () => `expected ${received} to be valid`,
+      pass: false,
+    };
+  }
+};
+
+export const toBeSameDateAs = (received: DateTime, expected: DateTime) => {
+  const areSameDate = received.toISODate() === expected.toISODate();
+
+  if (areSameDate) {
+    return {
+      message: () => `expected ${received} not to be same date as ${expected}`,
+      pass: true,
+    };
+  } else {
+    return {
+      message: () => `expected ${received} to be same date as ${expected}`,
+      pass: false,
+    };
+  }
+};

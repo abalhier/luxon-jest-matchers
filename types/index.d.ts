@@ -8,11 +8,13 @@ declare global {
       toEqualDateTime(expected: DateTime): R;
       toBeBeforeDateTime(date: DateTime): R;
       toBeAfterDateTime(date: DateTime): R;
+      toBeValidDateTime(): R;
+      toBeSameDateAs(date: DateTime): R;
 
       // Interval
       toEqualInterval(expected: Interval): R;
-      toEngulfInterval(expected: Interval): R;
-      toContainDateTime(expected: DateTime): R;
+      toEngulfInterval(interval: Interval): R;
+      toContainDateTime(date: DateTime): R;
 
       // Duration
       toEqualDuration(expected: Duration): R;

@@ -37,6 +37,8 @@ expect(anInterval).toEqualInterval(anotherInterval);
 - toEqualDateTime(date: DateTime)
 - toBeBeforeDateTime(date: DateTime)
 - toBeAfterDateTime(date: DateTime)
+- toBeValidDateTime()
+- toBeSameDateAs(date: DateTime)
 
 ## Duration
 

@@ -62,4 +62,29 @@ describe('DateTime matchers', () => {
       expect(now).not.toBeBeforeDateTime(nowMinusOneSecond);
     });
   });
+
+  describe('toBeValidDateTime', () => {
+    it('should not pass when date is not valid', () => {
+      expect('not a DateTime').not.toBeValidDateTime();
+      expect(DateTime.fromFormat('undefined', 'dd/MM/yyyy')).not.toBeValidDateTime();
+      expect(DateTime.fromFormat('02/02/2020', 'invalid')).not.toBeValidDateTime();
+    });
+
+    it('should pass when date is valid', () => {
+      expect(DateTime.local()).toBeValidDateTime();
+      expect(DateTime.fromFormat('02/02/2020', 'dd/MM/yyyy')).toBeValidDateTime();
+    });
+  });
+
+  describe('toBeSameDateAs', () => {
+    it('should not pass when DateTimes are not the same date', () => {
+      expect(DateTime.local().minus({ year: 1 })).not.toBeSameDateAs(DateTime.local());
+    });
+
+    it('should pass when DateTimes are the same date', () => {
+      const aprilFirst = DateTime.fromFormat('01/04/2020', 'dd/MM/yyyy').startOf('day');
+
+      expect(aprilFirst).toBeSameDateAs(aprilFirst.plus({ hour: 8 }));
+    });
+  });
 });

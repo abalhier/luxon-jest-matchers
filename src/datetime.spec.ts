@@ -66,6 +66,7 @@ describe('DateTime matchers', () => {
   describe('toBeValidDateTime', () => {
     it('should not pass when date is not valid', () => {
       expect('not a DateTime').not.toBeValidDateTime();
+      expect(DateTime.invalid('reason')).not.toBeValidDateTime();
       expect(DateTime.fromFormat('undefined', 'dd/MM/yyyy')).not.toBeValidDateTime();
       expect(DateTime.fromFormat('02/02/2020', 'invalid')).not.toBeValidDateTime();
     });

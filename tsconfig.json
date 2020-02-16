@@ -8,7 +8,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "target": "es6",
-    "lib": ["es6"],
+    "lib": ["es6", "DOM"],
     "typeRoots": ["types/index.d.ts", "node_modules/@types"]
   },
   "include": ["src/**/*.ts"],

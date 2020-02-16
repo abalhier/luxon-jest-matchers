@@ -1,7 +1,5 @@
 import { Interval, DateTime } from 'luxon';
-import luxonMatchers from './';
-
-expect.extend(luxonMatchers);
+import './';
 
 describe('Interval matchers', () => {
   describe('toEqual', () => {

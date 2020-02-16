@@ -1,7 +1,5 @@
 import { Duration } from 'luxon';
-import luxonMatchers from './';
-
-expect.extend(luxonMatchers);
+import './';
 
 describe('Duration matchers', () => {
   it('should not pass when Durations are not equal', () => {

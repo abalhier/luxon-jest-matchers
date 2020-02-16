@@ -2,7 +2,7 @@ import { toEqualDateTime, toBeAfterDateTime, toBeBeforeDateTime, toBeValidDateTi
 import { toEqualDuration, toEqualDurationAs } from './duration';
 import { toEqualInterval, toEngulfInterval, toContainDateTime } from './interval';
 
-export default {
+const matchers = {
   toBeBeforeDateTime,
   toBeAfterDateTime,
   toBeValidDateTime,
@@ -14,3 +14,9 @@ export default {
   toEqualInterval,
   toEngulfInterval,
 };
+
+if (expect !== undefined) {
+  expect.extend(matchers);
+} else {
+  console.error('Jest expect variable not found : Check your setup');
+}

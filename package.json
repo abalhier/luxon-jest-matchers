@@ -1,6 +1,6 @@
 {
   "name": "luxon-jest-matchers",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Provides Jest matchers for Luxon",
   "main": "lib/index.js",
   "types": "types/index.d.ts",

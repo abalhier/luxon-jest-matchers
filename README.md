@@ -12,7 +12,17 @@ yarn add --dev luxon-jest-matchers
 
 # Setup
 
-Just add this to your Jest setup file or before your tests :
+## Jest
+
+In your jest.config.js :
+
+```
+setupFilesAfterEnv: ['luxon-jest-matchers']
+```
+
+## Typescript
+
+You can add this at the beginning of your tests or in a definition file (.d.ts) you include in your tsconfig.json :
 
 ```
 import 'luxon-jest-matchers';

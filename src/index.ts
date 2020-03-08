@@ -7,8 +7,8 @@ import {
   toBeValidDateTime,
   toBeSameDateAs,
 } from './datetime';
-import { toEqualDuration, toEqualDurationAs } from './duration';
-import { toEqualInterval, toEngulfInterval, toContainDateTime } from './interval';
+import { toEqualDuration, toEqualDurationAs, toBeValidDuration } from './duration';
+import { toEqualInterval, toEngulfInterval, toContainDateTime, toBeValidInterval } from './interval';
 
 const matchers = {
   toBeBeforeDateTime,
@@ -21,8 +21,10 @@ const matchers = {
   toEqualDateTime,
   toEqualDuration,
   toEqualDurationAs,
+  toBeValidDuration,
   toEqualInterval,
   toEngulfInterval,
+  toBeValidInterval,
 };
 
 if (expect !== undefined) {

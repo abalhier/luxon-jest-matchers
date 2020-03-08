@@ -17,10 +17,12 @@ declare global {
       toEqualInterval(expected: Interval): R;
       toEngulfInterval(interval: Interval): R;
       toContainDateTime(date: DateTime): R;
+      toBeValidInterval(): R;
 
       // Duration
       toEqualDuration(expected: Duration): R;
       toEqualDurationAs(expected: Duration, unit: DurationUnit): R;
+      toBeValidDuration(): R;
     }
   }
 }

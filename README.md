@@ -44,9 +44,11 @@ import 'luxon-jest-matchers';
 
 - toEqualDuration(duration: Duration)
 - toEqualDurationAs(duration: Duration, unit: DurationUnit)
+- toBeValidDuration()
 
 ## Interval
 
 - toEqualInterval(interval: Interval)
 - toEngulfInterval(interval: Interval)
 - toContainDateTime(date: DateTime)
+- toBeValidInterval()

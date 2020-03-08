@@ -47,3 +47,17 @@ export const toContainDateTime = (received: Interval, expected: DateTime) => {
     };
   }
 };
+
+export const toBeValidInterval = (received: Interval) => {
+  if (received.isValid) {
+    return {
+      message: () => `expected ${received} not to be valid `,
+      pass: true,
+    };
+  } else {
+    return {
+      message: () => `expected ${received} to be valid`,
+      pass: false,
+    };
+  }
+};

@@ -20,3 +20,17 @@ const innerToEqualDuration = (received: Duration, expected: Duration, equals: (d
     };
   }
 };
+
+export const toBeValidDuration = (received: Duration) => {
+  if (received.isValid) {
+    return {
+      message: () => `expected ${received} not to be valid `,
+      pass: true,
+    };
+  } else {
+    return {
+      message: () => `expected ${received} to be valid`,
+      pass: false,
+    };
+  }
+};

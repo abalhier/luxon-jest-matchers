@@ -52,4 +52,15 @@ describe('Interval matchers', () => {
       expect(betweenNowAndOneHour).toContainDateTime(DateTime.local().plus({ minute: 59 }));
     });
   });
+
+  describe('toBeValidInterval', () => {
+    it('should not pass when interval is not valid', () => {
+      expect('not an Interval').not.toBeValidInterval();
+      expect(Interval.invalid('reason')).not.toBeValidInterval();
+    });
+
+    it('should pass when interval is valid', () => {
+      expect(Interval.after(DateTime.local(), { hour: 3 })).toBeValidInterval();
+    });
+  });
 });

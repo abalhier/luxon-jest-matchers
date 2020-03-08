@@ -7,7 +7,9 @@ declare global {
       // DateTime
       toEqualDateTime(expected: DateTime): R;
       toBeBeforeDateTime(date: DateTime): R;
+      toBeStrictlyBeforeDateTime(date: DateTime): R;
       toBeAfterDateTime(date: DateTime): R;
+      toBeStrictlyAfterDateTime(date: DateTime): R;
       toBeValidDateTime(): R;
       toBeSameDateAs(date: DateTime): R;
 

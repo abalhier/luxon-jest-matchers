@@ -1,9 +1,19 @@
-import { toEqualDateTime, toBeAfterDateTime, toBeBeforeDateTime, toBeValidDateTime, toBeSameDateAs } from './datetime';
+import {
+  toEqualDateTime,
+  toBeStrictlyAfterDateTime,
+  toBeAfterDateTime,
+  toBeStrictlyBeforeDateTime,
+  toBeBeforeDateTime,
+  toBeValidDateTime,
+  toBeSameDateAs,
+} from './datetime';
 import { toEqualDuration, toEqualDurationAs } from './duration';
 import { toEqualInterval, toEngulfInterval, toContainDateTime } from './interval';
 
 const matchers = {
   toBeBeforeDateTime,
+  toBeStrictlyBeforeDateTime,
+  toBeStrictlyAfterDateTime,
   toBeAfterDateTime,
   toBeValidDateTime,
   toBeSameDateAs,

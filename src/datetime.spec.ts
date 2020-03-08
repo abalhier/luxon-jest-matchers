@@ -18,16 +18,18 @@ describe('DateTime matchers', () => {
   });
 
   describe('toBeAfterDateTime', () => {
-    it('should not pass when first DateTime is equal to given DateTime', () => {
+    it('should not pass when first DateTime is equal to given DateTime and strict mode', () => {
       const now = DateTime.local();
 
-      expect(now).not.toBeAfterDateTime(now);
+      expect(now).not.toBeStrictlyAfterDateTime(now);
+      expect(now).toBeAfterDateTime(now);
     });
 
     it('should pass when first DateTime is after given DateTime', () => {
       const now = DateTime.local();
       const nowMinusOneSecond = now.minus({ second: 1 });
 
+      expect(now).toBeStrictlyAfterDateTime(nowMinusOneSecond);
       expect(now).toBeAfterDateTime(nowMinusOneSecond);
     });
 
@@ -35,21 +37,24 @@ describe('DateTime matchers', () => {
       const now = DateTime.local();
       const nowPlusOneSecond = now.plus({ second: 1 });
 
+      expect(now).not.toBeStrictlyAfterDateTime(nowPlusOneSecond);
       expect(now).not.toBeAfterDateTime(nowPlusOneSecond);
     });
   });
 
   describe('toBeBeforeDateTime', () => {
-    it('should not pass when first DateTime is equal to given DateTime', () => {
+    it('should not pass when first DateTime is equal to given DateTime and strict mode', () => {
       const now = DateTime.local();
 
-      expect(now).not.toBeBeforeDateTime(now);
+      expect(now).not.toBeStrictlyBeforeDateTime(now);
+      expect(now).toBeBeforeDateTime(now);
     });
 
     it('should pass when first DateTime is before given DateTime', () => {
       const now = DateTime.local();
       const nowPlusOneSecond = now.plus({ second: 1 });
 
+      expect(now).toBeStrictlyBeforeDateTime(nowPlusOneSecond);
       expect(now).toBeBeforeDateTime(nowPlusOneSecond);
     });
 
@@ -58,6 +63,7 @@ describe('DateTime matchers', () => {
       const nowMinusOneSecond = now.minus({ second: 1 });
 
       expect(now).not.toBeBeforeDateTime(nowMinusOneSecond);
+      expect(now).not.toBeStrictlyBeforeDateTime(nowMinusOneSecond);
     });
   });
 

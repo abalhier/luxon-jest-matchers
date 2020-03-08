@@ -33,7 +33,9 @@ import 'luxon-jest-matchers';
 ## DateTime
 
 - toEqualDateTime(date: DateTime)
+- toBeStrictlyBeforeDateTime(date: DateTime)
 - toBeBeforeDateTime(date: DateTime)
+- toBeStrictlyAfterDateTime(date: DateTime)
 - toBeAfterDateTime(date: DateTime)
 - toBeValidDateTime()
 - toBeSameDateAs(date: DateTime)
